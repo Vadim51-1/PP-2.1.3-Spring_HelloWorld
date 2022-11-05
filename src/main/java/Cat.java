@@ -1,4 +1,5 @@
 public class Cat {
+
     private String value;
 
     public String getValue() {
@@ -9,4 +10,3 @@ public class Cat {
         this.value = value;
     }
 }
-

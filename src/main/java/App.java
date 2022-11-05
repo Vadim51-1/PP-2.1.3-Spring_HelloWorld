@@ -9,20 +9,14 @@ public class App {
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
 
-        HelloWorld bean2 =
+        HelloWorld helloWorld =
                 (HelloWorld) applicationContext.getBean("helloworld");
-        System.out.println(bean2.getMessage());
 
-        Cat beanCat =
-                (Cat) applicationContext.getBean("cat");
-        System.out.println(beanCat.getValue());
+        Cat catOne = (Cat) applicationContext.getBean("cat");
+        Cat catToo = (Cat) applicationContext.getBean("cat");
 
-        Cat beanCat2 =
-                (Cat) applicationContext.getBean("cat");
-        System.out.println(beanCat2.getValue());
+        System.out.println(bean == helloWorld);
+        System.out.println(catOne == catToo);
 
-        System.out.println(bean == bean2);
-
-        System.out.println(beanCat2 == beanCat);
     }
 }
